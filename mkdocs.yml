@@ -3,6 +3,8 @@ theme: material
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.highlight
+  - pymdownx.superfences
 extra_javascript:
   - javascripts/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -10,5 +12,6 @@ extra_javascript:
 nav:
     - Home: index.md
     - Tutorial:
+        - Shape Space: tutorial_shape_space.md
         - Statistical Shape Modeling: tutorial_ssm.md
         - Regression: tutorial_regression.md

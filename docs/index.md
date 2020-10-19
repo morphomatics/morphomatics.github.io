@@ -37,6 +37,10 @@ References:
 
 ## Contributors
 
+* [Christoph von Tycowicz](https://www.tycowicz.de)
+* [Felix Ambellan](https://www.zib.de/members/ambellan)
+* [Martin Hanik](https://www.zib.de/members/hanik)
+
 ## Install
 
 * buckle up!
