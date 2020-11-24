@@ -31,7 +31,7 @@ References:
 
 > Martin Hanik, Hans-Christian Hege, Anja Hennemuth, Christoph von Tycowicz:  
 > **Nonlinear Regression on Manifolds for Shape Analysis using Intrinsic Bézier Splines.**  
-> Proc. Medical Image Computing and Computer Assisted Intervention, 2020. 
+> Proc. Medical Image Computing and Computer Assisted Intervention (MICCAI), 2020. 
 
 ## Citations
 
