@@ -27,7 +27,7 @@ A minimizer of $\mathcal{E}$ (from a class of trajectories) is called least-squa
 Generalizing the linear ansatz, _geodesic regression_ assumes that the relationship of a manifold-valued observed variable and a (single) co-varying parameter is well approximated by a generalized straight line.
 It is thus estimated by the geodesic least-squares estimator. The following example for data from the manifold of 3x3 rotation matrices shows how geodesic regression is computed in Morphomatics.
 
-```
+```py
 import numpy as np
 
 from morphomatics.manifold import SO3
@@ -41,28 +41,40 @@ M = SO3()
 I = np.eye(3)
 R = np.array([[np.cos(np.pi / 6), -np.sin(np.pi / 6), 0], [np.sin(np.pi / 6), np.cos(np.pi / 6), 0], [0, 0, 1]])
 
-# data 
-Y = np.zeros((4, 1, 3, 3))
-Y[0, 0] = I
-Y[1, 0] = M.exp(M.geopoint(I, R, 1 / 3), np.array([[0, 0, 0], [0, 0, 0.2], [0, -0.2, 0]]))
-Y[2, 0] = M.exp(M.geopoint(I, R, 2 / 3), np.array([[0, 0, 0.1], [0, 0, 0], [-0.1, 0, 0]]))
-Y[3, 0] = R
+# 6 points in SO(3). The extra dimension is not needed here but comes into play when the data consists of 
+# tuples of matrices.
+Y = np.zeros((6, 1, 3, 3))
+Y[0, 0] = M.exp(M.geopoint(I, R, -2 / 3), np.array([[0, 0, 0.1], [0, 0, 0], [-0.1, 0, 0]]))
+Y[1, 0] = M.exp(M.geopoint(I, R, -1 / 3), np.array([[0, 0, 0], [0, 0, 0.2], [0, -0.2, 0]]))
+Y[2, 0] = I
+Y[3, 0] = M.exp(M.geopoint(I, R, 1 / 3), np.array([[0, 0, 0], [0, 0, 0.2], [0, -0.2, 0]]))
+Y[4, 0] = M.exp(M.geopoint(I, R, 2 / 3), np.array([[0, 0, 0.1], [0, 0, 0], [-0.1, 0, 0]]))
+Y[5, 0] = R
 
 # corresponding time points
-t = np.array([0, 1/3, 2/3, 1, 4/3, 5/3,  2])
+t = np.array([0, 1/5, 2/5, 3/5, 4/5, 1])
 
-# cubic curve model
+# geodesic has degree 1
 degrees = np.array([1])
 
 # solve
 regression = RiemannianRegression(M, Y, t, degrees)
 
-# optimal geodesic
+# geodesic least-squares estimator
 gam = regression.trend
 
-# evalute gam at 100 equidistant time points
-p = gam.eval()
+# evaluate geodesic at 100 equidistant points
+X = gam.eval()
+
 ```
+To visualize the regressed geodesic, the 100 rotation matrices that were sampled from it as well as the 6 data matrices
+were applied to the vector $q=\begin{bmatrix} 1 & 0 & 0 \end{bmatrix}^T$. The results all lie on the unit sphere;
+they are shown in the following image.
+![Geodesic Regression](geodesic_regression.png)
+**Figure 1** Geodesic regression in SO(3) visualized by applying each matrix to the vector $q=\begin{bmatrix} 1 & 0 & 0 \end{bmatrix}^T$.
+The yellow spheres are the rotations of q by the data points. Applying each of the 100 samples of the optimal geodesic yields the colored curve 
+(color indicating parametrization).
+
 
 ## Higher-order regression
 
@@ -71,15 +83,15 @@ Instead, higher-order models are necessary that generalize polynomial regression
 Apart from being generalized polynomials, they can be constructed explicitly, which allows for fast computations. After model selection, i.e., choosing a degree $k$, the least squares estimator 
 within the class of Bézier curves of degree $k$ is the result of the regression.
 
-In the following, we show regression with cubic Bézier curves for the same data as in the example above.
+In the following, we show regression with cubic Bézier curves for the same data as in the example above. 
 
-```
+```py
 import numpy as np
 
 from morphomatics.manifold import SO3
 from morphomatics.stats import RiemannianRegression
 
-"""Cubic regression for data in SO(3)"""
+"""Regression with cubic curves for data in SO(3)"""
 
 M = SO3()
 
@@ -87,29 +99,89 @@ M = SO3()
 I = np.eye(3)
 R = np.array([[np.cos(np.pi / 6), -np.sin(np.pi / 6), 0], [np.sin(np.pi / 6), np.cos(np.pi / 6), 0], [0, 0, 1]])
 
-# data 
-Y = np.zeros((4, 1, 3, 3))
-Y[0, 0] = I
-Y[1, 0] = M.exp(M.geopoint(I, R, 1 / 3), np.array([[0, 0, 0], [0, 0, 0.2], [0, -0.2, 0]]))
-Y[2, 0] = M.exp(M.geopoint(I, R, 2 / 3), np.array([[0, 0, 0.1], [0, 0, 0], [-0.1, 0, 0]]))
-Y[3, 0] = R
+Y = np.zeros((6, 1, 3, 3))
+Y[0, 0] = M.exp(M.geopoint(I, R, -2 / 3), np.array([[0, 0, 0.1], [0, 0, 0], [-0.1, 0, 0]]))
+Y[1, 0] = M.exp(M.geopoint(I, R, -1 / 3), np.array([[0, 0, 0], [0, 0, 0.2], [0, -0.2, 0]]))
+Y[2, 0] = I
+Y[3, 0] = M.exp(M.geopoint(I, R, 1 / 3), np.array([[0, 0, 0], [0, 0, 0.2], [0, -0.2, 0]]))
+Y[4, 0] = M.exp(M.geopoint(I, R, 2 / 3), np.array([[0, 0, 0.1], [0, 0, 0], [-0.1, 0, 0]]))
+Y[5, 0] = R
 
 # corresponding time points
-t = np.array([0, 1/3, 2/3, 1, 4/3, 5/3,  2])
+t = np.array([0, 1/5, 2/5, 3/5, 4/5, 1])
 
-# degree of a cubic Bézier curve is 3
+# cubic Bézier curve have degree 3
 degrees = np.array([3])
 
 # solve
 regression = RiemannianRegression(M, Y, t, degrees)
 
-# optimal cubic Bézier curve
+# cubic least-squares estimator
 bet = regression.trend
 
-# evalute bet at 100 equidistant time points
-p = bet.eval()
+# evaluate the curve at 100 equidistant points
+X = bet.eval()
+
 ```
+The results can be visulized as for geodesic regression. Note that the cubic curve describes the data a lot better than the geodesic.
+
+![Cubic Regression](cubic_regression.png)
+**Figure 2** Regression with cubic Bézier curves in SO(3) visualized by applying each matrix to the vector $q=\begin{bmatrix} 1 & 0 & 0 \end{bmatrix}^T$.
+The yellow spheres are the rotations of q by the data points. Applying each of the 100 samples of the optimal geodesic yields the colored curve 
+(color indicating parametrization).
 
 ## Spline regression
 
-TODO: example code
+Generalized Bézier curves can be joined together in a differentiable way. The resulting _Bézier splines_ are very flexible
+and, thus, allow to describe many phenomena. In particular, since there are closed Bézier splines,
+they can be used to model cyclic behavior like the motion of the heart.
+
+```py
+import numpy as np
+
+from morphomatics.manifold import SO3
+from morphomatics.stats import RiemannianRegression
+
+"""Regression with closed splines for data in SO(3)"""
+
+M = SO3()
+
+# z-axis is axis of rotation
+I = np.eye(3)
+Rz = np.array([[np.cos(np.pi / 6), -np.sin(np.pi / 6), 0], [np.sin(np.pi / 6), np.cos(np.pi / 6), 0], [0, 0, 1]])
+# x-axis is axis of rotation
+Rx = np.array([[1, 0, 0], [0, np.cos(np.pi / 6), -np.sin(np.pi / 6)], [0, np.sin(np.pi / 6), np.cos(np.pi / 6)]])
+
+Y = np.zeros((4, 1, 3, 3))
+Y[0, 0] = I
+Y[1, 0] = Rz
+Y[2, 0] = Rx @ Rz
+Y[3, 0] = Rx
+
+# spline consisting of 2 cubic segments (first and last segment must be at least cubic) 
+degrees = np.array([3, 3])
+
+# time points between 0 and 2 because we have two segments
+t = np.array([1/3, 2/3, 4/3, 5/3])
+
+# solve for closed spline
+regression = RiemannianRegression(M, Y, t, degrees, iscycle=True)
+
+# least-squares estimator within the class of closed Bézier splines with two cubic segments
+bet = regression.trend
+
+# evaluate the spline at 100 equidistant points
+X = bet.eval(time=np.linspace(0, bet.nsegments, 100))
+
+```
+
+Again, the results can be visualized on the sphere. Note that the computed closed spline interpolates the data points in this case.
+The reason for this is that we have only 4 data points and the same number of degrees of freedom. In general though, regression assumes noisy measurements and,
+thus, least-squares optimization and not interpolation is the goal.
+
+
+![Spline Regression](spline_regression.png)
+**Figure 3** Regression with closed Bézier splines consisting of 2 cubic segments in SO(3). Results are visualized by 
+applying each matrix to the vector $q=\begin{bmatrix} 1 & 0 & 0 \end{bmatrix}^T$.
+The yellow spheres are the rotations of q by the data points. Applying each of the 100 samples of the optimal geodesic yields the colored curve 
+(color indicating parametrization).
