@@ -1,6 +1,6 @@
 # Morphomatics - Geometric morphometrics in non-Euclidean shape spaces
 
-Morhpomatics is an open-source Python library for (statistical) shape analysis developed within the [geometric data analysis and processing](https://www.zib.de/visual/geometric-data-analysis-and-processing) research group at Zuse Institute Berlin.
+Morphomatics is an open-source Python library for (statistical) shape analysis developed within the [geometric data analysis and processing](https://www.zib.de/visual/geometric-data-analysis-and-processing) research group at Zuse Institute Berlin.
 It contains prototype implementations of intrinsic manifold-based methods that are highly consistent and avoid the influence of unwanted effects such as bias due to arbitrary choices of coordinates.
 
 The [source code](https://github.com/morphomatics/morphomatics) is freely available on GitHub.
@@ -17,12 +17,12 @@ The rich structure of the derived shape space yields highly discriminative shape
 References:
 
 > Christoph von Tycowicz, Felix Ambellan, Anirban Mukhopadhyay, and Stefan Zachow:  
-> **An Efficient Riemannian Statistical Shape Model using Differential Coordinates.**  
+> **[An Efficient Riemannian Statistical Shape Model using Differential Coordinates.](https://opus4.kobv.de/opus4-zib/files/6117/ZIBReport_16-69.pdf)**  
 > Medical Image Analysis, Volume 43, January 2018.
 
 <!--  -->
 > Felix Ambellan, Stefan Zachow, and Christoph von Tycowicz:  
-> **A Surface-Theoretic Approach for Statistical Shape Modeling.**  
+> **[A Surface-Theoretic Approach for Statistical Shape Modeling.](https://opus4.kobv.de/opus4-zib/files/7449/ZIBReport_19-20.pdf)**  
 > Proc. Medical Image Computing and Computer Assisted Intervention (MICCAI), Lecture Notes in Computer Science, 2019.
 
 ## Manifold-valued regression
@@ -30,7 +30,7 @@ References:
 References:
 
 > Martin Hanik, Hans-Christian Hege, Anja Hennemuth, Christoph von Tycowicz:  
-> **Nonlinear Regression on Manifolds for Shape Analysis using Intrinsic Bézier Splines.**  
+> **[Nonlinear Regression on Manifolds for Shape Analysis using Intrinsic Bézier Splines.](http://arxiv.org/abs/2007.05275)**  
 > Proc. Medical Image Computing and Computer Assisted Intervention (MICCAI), 2020. 
 
 ## Citations

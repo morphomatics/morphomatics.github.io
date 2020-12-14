@@ -9,8 +9,6 @@ Moreover, their parameter space provides a compact representation that is amenab
 
 ## Intrinsic mean
 
-\[
-\mu = \arg\min_x \sum_i \text{dist}^2(x,x_i)
-\]
+$\mu = \arg\min_x \sum_i \text{dist}^2(x,x_i)$
 
 ## Principal geodesic analysis

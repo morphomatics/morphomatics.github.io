@@ -10,19 +10,18 @@ To obtain a computational model, we require a digital representation of shapes a
 To this end, we employ triangular surface meshes for which we provide the `Surface` class.
 A surface mesh is specified by a pair of matrices:
 
-\[
-v = \begin{bmatrix} x_0 & y_0 & z_0 \\ x_1 & y_1 & z_1 \\ & \vdots & \end{bmatrix} \in \mathbb{R}^{n \times 3}
+$v = \begin{bmatrix} x_0 & y_0 & z_0 \\ x_1 & y_1 & z_1 \\ & \vdots & \end{bmatrix} \in \mathbb{R}^{n \times 3}
 \text{ and }
-f = \begin{bmatrix} i_0 & j_0 & k_0 \\ i_1 & j_1 & k_1 \\ & \vdots & \end{bmatrix} \in \mathbb{R}^{m \times 3},
-\]
+f = \begin{bmatrix} i_0 & j_0 & k_0 \\ i_1 & j_1 & k_1 \\ & \vdots & \end{bmatrix} \in \mathbb{R}^{m \times 3},$
 
-where $v$ holds the coordinates of $n$ vertices and $f$ specifies which of the vertices form triangles.
+where $v$ holds the coordinates of $n$ vertices and $f$ lists which vertices (i.e. indices thereof w.r.t. $v$) form each of $m$ triangles.
 For example, we can create a tetrahedron like this:
 
 ```py
 import numpy as np
 from morphomatics.mesh import Surface
 
+# 4 vertices
 v = np.array([
     [0.57735, 0.57735, 0.57735],
     [-0.57735, 0.57735, -0.57735],
@@ -30,6 +29,8 @@ v = np.array([
     [0.57735, -0.57735, -0.57735]
 ])
 
+# 4 triangles
+# note: by sharing vertices (each is referenced 3 times), triangles are 'glued' together
 f = np.array([
     [0, 3, 1],
     [1, 3, 2],
