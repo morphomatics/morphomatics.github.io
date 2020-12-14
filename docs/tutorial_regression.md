@@ -27,7 +27,7 @@ A minimizer of $\mathcal{E}$ (from a class of trajectories) is called least-squa
 Generalizing the linear ansatz, geodesic regression assumes that the relationship of a manifold-valued observed variable and a (single) co-varying parameter is well approximated by a generalized straight line.
 It is thus estimated by the geodesic least-squares estimator. The following example for data from the manifold of 3x3 rotation matrices shows how geodesic regression can be computed in Morphomatics.
 
-```py
+```
 import numpy as np
 
 from morphomatics.manifold import SO3
@@ -48,10 +48,10 @@ Y[1, 0] = M.exp(M.geopoint(I, R, 1 / 3), np.array([[0, 0, 0], [0, 0, 0.2], [0, -
 Y[2, 0] = M.exp(M.geopoint(I, R, 2 / 3), np.array([[0, 0, 0.1], [0, 0, 0], [-0.1, 0, 0]]))
 Y[3, 0] = R
 
-% corresponding time points
+# corresponding time points
 t = np.array([0, 1/3, 2/3, 1, 4/3, 5/3,  2])
 
-% want geodesic regression -> degree is equal to 1
+# degree of a geodesic is equal to 1
 degrees = np.array([1])
 
 # solve
