@@ -70,7 +70,7 @@ X = gam.eval()
 To visualize the regressed geodesic, the 100 rotation matrices that were sampled from it as well as the 6 data matrices
 were applied to the vector $q=\begin{bmatrix} 1 & 0 & 0 \end{bmatrix}^T$. The results all lie on the unit sphere;
 they are shown in the following image.
-![Geodesic Regression](geodesic_regression.png)
+![Geodesic Regression](images/geodesic_regression.png)
 **Figure 1** Geodesic regression in SO(3) visualized by applying each matrix to the vector $q=\begin{bmatrix} 1 & 0 & 0 \end{bmatrix}^T$.
 The yellow spheres are the rotations of q by the data points. Applying each of the 100 samples of the optimal geodesic yields the colored curve 
 (color indicating parametrization).
@@ -125,7 +125,7 @@ X = bet.eval()
 ```
 The results can be visulized as for geodesic regression. Note that the cubic curve describes the data a lot better than the geodesic.
 
-![Cubic Regression](cubic_regression.png)
+![Cubic Regression](images/cubic_regression.png)
 **Figure 2** Regression with cubic Bézier curves in SO(3) visualized by applying each matrix to the vector $q=\begin{bmatrix} 1 & 0 & 0 \end{bmatrix}^T$.
 The yellow spheres are the rotations of q by the data points. Applying each of the 100 samples of the optimal geodesic yields the colored curve 
 (color indicating parametrization).
@@ -180,7 +180,7 @@ The reason for this is that we have only 4 data points and the same number of de
 thus, least-squares optimization and not interpolation is the goal.
 
 
-![Spline Regression](spline_regression.png)
+![Spline Regression](images/spline_regression.png)
 **Figure 3** Regression with closed Bézier splines consisting of 2 cubic segments in SO(3). Results are visualized by 
 applying each matrix to the vector $q=\begin{bmatrix} 1 & 0 & 0 \end{bmatrix}^T$.
 The yellow spheres are the rotations of q by the data points. Applying each of the 100 samples of the optimal geodesic yields the colored curve 
