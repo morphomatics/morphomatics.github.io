@@ -11,4 +11,19 @@ Moreover, their parameter space provides a compact representation that is amenab
 
 $\mu = \arg\min_x \sum_i \text{dist}^2(x,x_i)$
 
+`morphomatics.stats.ExponentialBarycenter`
+
 ## Principal geodesic analysis
+
+Tangent PCA / inexact PGA
+`morphomatics.stats.PrincipalGeodesicAnalysis`
+
+## Statistical shape model
+
+`morphomatics.stats.StatisticalShapeModel`
+
+Remove bias due to choice of reference shape.
+
+Get shape coefficients
+
+
