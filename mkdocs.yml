@@ -1,5 +1,12 @@
 site_name: Morphomatics
-theme: material
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: teal
+    accent: amber
+  logo: images/logo.png
+repo_url: https://github.com/morphomatics/morphomatics
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
@@ -15,3 +22,4 @@ nav:
         - Shape Space: tutorial_shape_space.md
         - Statistical Shape Modeling: tutorial_ssm.md
         - Regression: tutorial_regression.md
+    - Imprint: imprint.md
