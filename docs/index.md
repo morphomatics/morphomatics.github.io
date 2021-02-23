@@ -1,12 +1,26 @@
-# Morphomatics - Geometric morphometrics in non-Euclidean shape spaces
+# Morphomatics: Geometric morphometrics in non-Euclidean shape spaces
 
 Morphomatics is an open-source Python library for (statistical) shape analysis developed within the [geometric data analysis and processing](https://www.zib.de/visual/geometric-data-analysis-and-processing) research group at Zuse Institute Berlin.
 It contains prototype implementations of intrinsic manifold-based methods that are highly consistent and avoid the influence of unwanted effects such as bias due to arbitrary choices of coordinates.
 
 The [source code](https://github.com/morphomatics/morphomatics) is freely available on GitHub.
 
-If you are using Morphomatics to derive results for a publication, we politely ask you to aknowledge Morphomatics in your manuscript and to cite each of the publications (listed below) that are relevant for your use.
-Of course, if you want, we will also list a reference to your work here. 
+##Citation
+
+If you use Morphomatics in your academic projects, we politely ask you to aknowledge Morphomatics in your manuscript and to cite each of the publications (listed below) that are relevant for your use.
+You may cite the library in general using this BibTeX entry:
+
+```bibtex
+@misc{Morphomatics,
+  title = {Morphomatics: Geometric morphometrics in non-Euclidean shape spaces},
+  author = {Felix Ambellan and Martin Hanik and Christoph von Tycowicz},
+  note = {https://morphomatics.github.io/},
+  year = {2021},
+}
+```
+
+Of course, if you want, we will also list a reference to your work/project/etc. here. 
+
 
 ## Riemannian shape spaces
 
@@ -33,15 +47,14 @@ References:
 > **[Nonlinear Regression on Manifolds for Shape Analysis using Intrinsic Bézier Splines.](http://arxiv.org/abs/2007.05275)**  
 > Proc. Medical Image Computing and Computer Assisted Intervention (MICCAI), 2020. 
 
-## Citations
-
 ## Contributors
 
 * [Christoph von Tycowicz](https://www.tycowicz.de)
 * [Felix Ambellan](https://www.zib.de/members/ambellan)
 * [Martin Hanik](https://www.zib.de/members/hanik)
 
+<!--
 ## Install
 
 * buckle up!
-
+-->

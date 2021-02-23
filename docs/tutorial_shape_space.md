@@ -19,7 +19,7 @@ For example, we can create a tetrahedron like this:
 
 ```py
 import numpy as np
-from morphomatics.mesh import Surface
+from morphomatics.geom import Surface
 
 # 4 vertices
 v = np.array([
