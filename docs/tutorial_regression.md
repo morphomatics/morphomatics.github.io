@@ -1,6 +1,6 @@
 # Manifold-valued regression
 
-Regression analysis is a reliable statistical approach to estimate the relationship between observed variables, e.g. shapes and their co-varying parameters.
+Regression analysis is a reliable statistical approach to estimate the relationship between observed variables, e.g. shapes, and their co-varying parameters.
 For geometric data we again required intrinsic approaches that account for and fully leverage the geometry of the data space. 
 The most widely used is to approximate the observed temporal shape data by geodesics, i.e. generalized straight lines.
 Geodesic models are attractive as they feature a compact representation (similar to the slope and intercept term in linear regression) and therefore allow for computationally efficient inference.
