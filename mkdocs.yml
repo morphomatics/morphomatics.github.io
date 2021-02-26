@@ -6,6 +6,7 @@ theme:
     primary: teal
     accent: amber
   logo: images/logo.png
+  favicon: images/favicon.png
 repo_url: https://github.com/morphomatics/morphomatics
 markdown_extensions:
   - pymdownx.arithmatex:
