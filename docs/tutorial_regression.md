@@ -1,4 +1,4 @@
-# Manifold-valued regression
+# Regression in Riemannian manifolds
 
 Regression analysis is a reliable statistical approach to estimate the relationship between observed variables, e.g. shapes, and their co-varying parameters.
 For geometric data we again required intrinsic approaches that account for and fully leverage the geometry of the data space. 

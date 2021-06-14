@@ -39,13 +39,19 @@ References:
 > **[A Surface-Theoretic Approach for Statistical Shape Modeling.](https://opus4.kobv.de/opus4-zib/files/7449/ZIBReport_19-20.pdf)**  
 > Proc. Medical Image Computing and Computer Assisted Intervention (MICCAI), Lecture Notes in Computer Science, 2019.
 
-## Manifold-valued regression
+## Regression in Riemannian manifolds
 
 References:
 
 > Martin Hanik, Hans-Christian Hege, Anja Hennemuth, Christoph von Tycowicz:  
 > **[Nonlinear Regression on Manifolds for Shape Analysis using Intrinsic Bézier Splines.](http://arxiv.org/abs/2007.05275)**  
 > Proc. Medical Image Computing and Computer Assisted Intervention (MICCAI), 2020. 
+
+## Similarity measures for sample distributions in Lie groups
+
+> Martin Hanik, Hans-Christian Hege, Christoph von Tycowicz:  
+> **[Bi-invariant Two-Sample Tests in Lie Groups for Shape Analysis.](https://arxiv.org/abs/2008.12195)**  
+> Shape in Medical Imaging, 2020. 
 
 ## Contributors
 

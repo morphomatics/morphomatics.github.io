@@ -22,4 +22,5 @@ nav:
         - Shape Space: tutorial_shape_space.md
         - Statistical Shape Modeling: tutorial_ssm.md
         - Regression: tutorial_regression.md
+        - Statistics in Lie groups: tutorial_biinvariant_statistics.md
     - Imprint: imprint.md
