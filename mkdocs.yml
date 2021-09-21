@@ -17,11 +17,13 @@ extra_javascript:
   - javascripts/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+plugins:
+  - mkdocs-jupyter
 nav:
     - Home: index.md
     - Tutorial:
         - Shape Space: tutorial_shape_space.md
         - Statistical Shape Modeling: tutorial_ssm.md
-        - Regression: tutorial_regression.md
+        - Regression: tutorial_regression.ipynb
         - Statistics in Lie groups: tutorial_biinvariant_statistics.md
     - Imprint: imprint.md
