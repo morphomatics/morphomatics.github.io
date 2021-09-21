@@ -36,8 +36,8 @@ References:
 
 <!--  -->
 > Felix Ambellan, Stefan Zachow, and Christoph von Tycowicz:  
-> **[A Surface-Theoretic Approach for Statistical Shape Modeling.](https://opus4.kobv.de/opus4-zib/files/7449/ZIBReport_19-20.pdf)**  
-> Proc. Medical Image Computing and Computer Assisted Intervention (MICCAI), Lecture Notes in Computer Science, 2019.
+> **[Rigid Motion Invariant Statistical Shape Modeling Based on Discrete Fundamental Forms.](https://doi.org/10.1016/j.media.2021.102178)**  
+> Medical Image Analysis, Volume 73, January 2021.
 
 ## Regression in Riemannian manifolds
 
@@ -47,11 +47,21 @@ References:
 > **[Nonlinear Regression on Manifolds for Shape Analysis using Intrinsic Bézier Splines.](http://arxiv.org/abs/2007.05275)**  
 > Proc. Medical Image Computing and Computer Assisted Intervention (MICCAI), 2020. 
 
+
 ## Similarity measures for sample distributions in Lie groups
 
 > Martin Hanik, Hans-Christian Hege, Christoph von Tycowicz:  
 > **[Bi-invariant Two-Sample Tests in Lie Groups for Shape Analysis.](https://arxiv.org/abs/2008.12195)**  
 > Shape in Medical Imaging, 2020. 
+
+## Applications
+
+Several applications have been successively developed based on algorithms from Morphomatics:
+
+* __Geodesic B-Score__ **[[Ambellan et al. 21]](http://dx.doi.org/10.1007/978-3-030-78191-0_14)** [(arXiv)](http://arxiv.org/abs/2104.01107)
+* __Thin-Volume Visualization__ **[[Herter et al. 21]](http://dx.doi.org/10.1111/cgf.14296)**
+* __Jerash Silver Scroll Unfolding__ **[[Baum et al. 21]](http://dx.doi.org/10.1016/j.daach.2021.e00186)**
+
 
 ## Contributors
 
