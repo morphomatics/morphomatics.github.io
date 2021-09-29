@@ -22,8 +22,8 @@ plugins:
 nav:
     - Home: index.md
     - Tutorial:
-        - Shape Space: tutorial_shape_space.md
-        - Statistical Shape Modeling: tutorial_ssm.md
+        - Shape Space: tutorial_shape_space.ipynb
+        - Statistical Shape Modeling: tutorial_ssm.ipynb
         - Regression: tutorial_regression.ipynb
-        - Statistics in Lie groups: tutorial_biinvariant_statistics.md
+        - Statistics in Lie groups: tutorial_biinvariant_statistics.ipynb
     - Imprint: imprint.md
