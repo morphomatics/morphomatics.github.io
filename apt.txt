@@ -1,2 +1,3 @@
+apt-transport-https
 libgl1-mesa-dev
 xvfb
