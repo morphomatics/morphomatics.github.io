@@ -17,6 +17,7 @@ You may cite the library in general using this BibTeX entry:
   author = {Felix Ambellan and Martin Hanik and Christoph von Tycowicz},
   note = {https://morphomatics.github.io/},
   year = {2021},
+  doi = {10.12752/8544}
 }
 ```
 
