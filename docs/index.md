@@ -45,6 +45,12 @@ References:
 
 ## Regression in Riemannian manifolds
 
+Regression methods are central to multivariate statistics. We provide a consistent generalization of spline regression 
+(including polynomial regression) to Riemannian manifolds that is based on Bézier curves. It allows to model not only 
+geodesic (i.e., generalized linear) relationships but also (amongst others) saturated or even cyclic dependencies. It can therefore be 
+applied to a wide class of real-world applications with manifold-valued features, including but not limited to 
+applications of shape analysis.
+
 References:
 
 > Martin Hanik, Hans-Christian Hege, Anja Hennemuth, Christoph von Tycowicz:  
@@ -52,8 +58,33 @@ References:
 > Proc. Medical Image Computing and Computer Assisted Intervention (MICCAI), 2020. </br>
 > [![DOI](https://img.shields.io/badge/DOI-10.1007/978--3--030--59719--1__60-yellow)](http://dx.doi.org/10.1007/978-3-030-59719-1_60) [![Preprint](https://img.shields.io/badge/arXiv-2007.05275-red)](http://arxiv.org/abs/2007.05275)
 
+## Hierarchical Models and the Geometry of Bézier Splines
 
-## Similarity measures for sample distributions in Lie groups
+Longitudinal studies are common, e.g., in medical and pharmaceutical research. They yield data with high
+correlation between some samples and (almost) no correlation between others. Hierarchical models are an adequate choice
+of modelling the relationships underlying such data. With the ‘‘Bézierfold’’ (the manifold of Bézier spline through a given base manifold), 
+Morphomatics provides the means for a hierarchical modeling of manifold-valued data
+(e.g., from longitudinal studies that monitor shape developments). For an introductory example see the corresponding 
+tutorial.
+
+References:
+
+> Martin Hanik, Hans-Christian Hege, Christoph von Tycowicz:  
+> **[A Nonlinear Hierarchical Model for Longitudinal Data on Manifolds.](https://arxiv.org/abs/2202.01180)**  
+> Proc. International Symposium on Biomedical Imaging (ISBI), 2022. </br>
+> [![DOI](https://img.shields.io/badge/DOI-10.1109/ISBI52829.2022.9761465-yellow)](http://dx.doi.org/10.1109/ISBI52829.2022.9761465) [![Preprint](https://img.shields.io/badge/arXiv-2202.01180-red)](http://arxiv.org/abs/2202.01180)
+
+
+## Dissimilarity measures for sample distributions in Lie groups
+
+Multivariate statistical indices are not influenced by common shifts of the data; this is highly desirable as the latter are 
+fundamental symmetries of Euclidean space that do not change relationships between the samples. Lie groups also possess
+symmetries, but Riemannian statistical tools respect them only in special cases. (For example, they do not respect them 
+for data in the group of rigid-body transformations SE(3) in 3-space.) Morphomatics offers methods (a mean and dissimilarity measures for 
+sets of samples) that extend symmetry-awareness to _all_ Lie groups. They can be used, e.g., for two sample tests of SE(3)-valued 
+data that do not depend on the initial place and orientation in 3-space of the underlying objects.
+
+References:
 
 > Martin Hanik, Hans-Christian Hege, Christoph von Tycowicz:  
 > **[Bi-invariant Two-Sample Tests in Lie Groups for Shape Analysis.](https://arxiv.org/abs/2008.12195)**  
