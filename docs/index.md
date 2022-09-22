@@ -6,7 +6,7 @@ It contains prototype implementations of intrinsic manifold-based methods that a
 The [source code](https://github.com/morphomatics/morphomatics) is freely available on GitHub.
 Walk through the tutorials live on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/morphomatics/morphomatics.github.io/HEAD?filepath=docs%2Ftutorials)
 
-##Citation
+## Citation
 
 If you use Morphomatics in your academic projects, we politely ask you to aknowledge Morphomatics in your manuscript and to cite each of the publications (listed below) that are relevant for your use.
 You may cite the library in general using this BibTeX entry:
