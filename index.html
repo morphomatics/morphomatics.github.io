@@ -206,8 +206,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#similarity-measures-for-sample-distributions-in-lie-groups" class="md-nav__link">
-    Similarity measures for sample distributions in Lie groups
+  <a href="#hierarchical-models-and-the-geometry-of-bezier-splines" class="md-nav__link">
+    Hierarchical Models and the Geometry of Bézier Splines
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dissimilarity-measures-for-sample-distributions-in-lie-groups" class="md-nav__link">
+    Dissimilarity measures for sample distributions in Lie groups
   </a>
   
 </li>
@@ -297,7 +304,19 @@
 
   <li class="md-nav__item">
     <a href="tutorials/tutorial_biinvariant_statistics/" class="md-nav__link">
-      Statistics in Lie groups
+      Statistics in Lie Groups
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tutorials/tutorial_bezierfold/" class="md-nav__link">
+      Geometry of Bézier Splines
     </a>
   </li>
 
@@ -364,8 +383,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#similarity-measures-for-sample-distributions-in-lie-groups" class="md-nav__link">
-    Similarity measures for sample distributions in Lie groups
+  <a href="#hierarchical-models-and-the-geometry-of-bezier-splines" class="md-nav__link">
+    Hierarchical Models and the Geometry of Bézier Splines
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dissimilarity-measures-for-sample-distributions-in-lie-groups" class="md-nav__link">
+    Dissimilarity measures for sample distributions in Lie groups
   </a>
   
 </li>
@@ -437,6 +463,11 @@ Medical Image Analysis, Volume 73, January 2021.</br>
 <a href="https://doi.org/10.1016/j.media.2021.102178"><img alt="DOI" src="https://img.shields.io/badge/DOI-10.1016/j.media.2021.102178-yellow" /></a> <a href="http://arxiv.org/abs/2111.06850"><img alt="Preprint" src="https://img.shields.io/badge/arXiv-2111.06850-red" /></a></p>
 </blockquote>
 <h2 id="regression-in-riemannian-manifolds">Regression in Riemannian manifolds</h2>
+<p>Regression methods are central to multivariate statistics. We provide a consistent generalization of spline regression 
+(including polynomial regression) to Riemannian manifolds that is based on Bézier curves. It allows to model not only 
+geodesic (i.e., generalized linear) relationships but also (amongst others) saturated or even cyclic dependencies. It can therefore be 
+applied to a wide class of real-world applications with manifold-valued features, including but not limited to 
+applications of shape analysis.</p>
 <p>References:</p>
 <blockquote>
 <p>Martin Hanik, Hans-Christian Hege, Anja Hennemuth, Christoph von Tycowicz:<br />
@@ -444,7 +475,28 @@ Medical Image Analysis, Volume 73, January 2021.</br>
 Proc. Medical Image Computing and Computer Assisted Intervention (MICCAI), 2020. </br>
 <a href="http://dx.doi.org/10.1007/978-3-030-59719-1_60"><img alt="DOI" src="https://img.shields.io/badge/DOI-10.1007/978--3--030--59719--1__60-yellow" /></a> <a href="http://arxiv.org/abs/2007.05275"><img alt="Preprint" src="https://img.shields.io/badge/arXiv-2007.05275-red" /></a></p>
 </blockquote>
-<h2 id="similarity-measures-for-sample-distributions-in-lie-groups">Similarity measures for sample distributions in Lie groups</h2>
+<h2 id="hierarchical-models-and-the-geometry-of-bezier-splines">Hierarchical Models and the Geometry of Bézier Splines</h2>
+<p>Longitudinal studies are common, e.g., in medical and pharmaceutical research. They yield data with high
+correlation between some samples and (almost) no correlation between others. Hierarchical models are an adequate choice
+of modelling the relationships underlying such data. With the ‘‘Bézierfold’’ (the manifold of Bézier spline through a given base manifold), 
+Morphomatics provides the means for a hierarchical modeling of manifold-valued data
+(e.g., from longitudinal studies that monitor shape developments). For an introductory example see the corresponding 
+tutorial.</p>
+<p>References:</p>
+<blockquote>
+<p>Martin Hanik, Hans-Christian Hege, Christoph von Tycowicz:<br />
+<strong><a href="https://arxiv.org/abs/2202.01180">A Nonlinear Hierarchical Model for Longitudinal Data on Manifolds.</a></strong><br />
+Proc. International Symposium on Biomedical Imaging (ISBI), 2022. </br>
+<a href="http://dx.doi.org/10.1109/ISBI52829.2022.9761465"><img alt="DOI" src="https://img.shields.io/badge/DOI-10.1109/ISBI52829.2022.9761465-yellow" /></a> <a href="http://arxiv.org/abs/2202.01180"><img alt="Preprint" src="https://img.shields.io/badge/arXiv-2202.01180-red" /></a></p>
+</blockquote>
+<h2 id="dissimilarity-measures-for-sample-distributions-in-lie-groups">Dissimilarity measures for sample distributions in Lie groups</h2>
+<p>Multivariate statistical indices are not influenced by common shifts of the data; this is highly desirable as the latter are 
+fundamental symmetries of Euclidean space that do not change relationships between the samples. Lie groups also possess
+symmetries, but Riemannian statistical tools respect them only in special cases. (For example, they do not respect them 
+for data in the group of rigid-body transformations SE(3) in 3-space.) Morphomatics offers methods (a mean and dissimilarity measures for 
+sets of samples) that extend symmetry-awareness to <em>all</em> Lie groups. They can be used, e.g., for two sample tests of SE(3)-valued 
+data that do not depend on the initial place and orientation in 3-space of the underlying objects.</p>
+<p>References:</p>
 <blockquote>
 <p>Martin Hanik, Hans-Christian Hege, Christoph von Tycowicz:<br />
 <strong><a href="https://arxiv.org/abs/2008.12195">Bi-invariant Two-Sample Tests in Lie Groups for Shape Analysis.</a></strong><br />

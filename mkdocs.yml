@@ -26,4 +26,5 @@ nav:
         - Statistical Shape Modeling: tutorials/tutorial_ssm.ipynb
         - Regression: tutorials/tutorial_regression.ipynb
         - Statistics in Lie groups: tutorials/tutorial_biinvariant_statistics.ipynb
+        - Bézierfold: tutorials/tutorial_bezierfold.ipynb
     - Imprint: imprint.md
