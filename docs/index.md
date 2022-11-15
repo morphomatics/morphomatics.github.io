@@ -95,8 +95,9 @@ References:
 
 Several applications have been successively developed based on algorithms from Morphomatics:
 
-* __Predicting Cognitive Scores__ **[[Hanik et al. 21]](http://dx.doi.org/10.1007/s11682-021-00585-7)** [(arXiv)](http://arxiv.org/abs/2106.09408)
-* __Geodesic B-Score__ **[[Ambellan et al. 21]](http://dx.doi.org/10.1007/978-3-030-78191-0_14)** [(arXiv)](http://arxiv.org/abs/2104.01107)
+* __3D-from-2D Shape Estimation__ **[[Paskin et al. 22]](https://arxiv.org/abs/2207.12687)**
+* __Predicting Cognitive Scores__ **[[Hanik et al. 21]](http://arxiv.org/abs/2106.09408)**
+* __Geodesic B-Score__ **[[Ambellan et al. 21]](http://arxiv.org/abs/2104.01107)**
 * __Thin-Volume Visualization__ **[[Herter et al. 21]](http://dx.doi.org/10.1111/cgf.14296)**
 * __Jerash Silver Scroll Unfolding__ **[[Baum et al. 21]](http://dx.doi.org/10.1016/j.daach.2021.e00186)**
 
