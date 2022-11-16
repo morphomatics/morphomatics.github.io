@@ -87,9 +87,9 @@ data that do not depend on the initial place and orientation in 3-space of the u
 References:
 
 > Martin Hanik, Hans-Christian Hege, Christoph von Tycowicz:  
-> **[Bi-invariant Two-Sample Tests in Lie Groups for Shape Analysis.](https://arxiv.org/abs/2008.12195)**  
-> Shape in Medical Imaging, 2020. </br>
-> [![DOI](https://img.shields.io/badge/DOI-10.1007/978--3--030--61056--2__4-yellow)](http://dx.doi.org/10.1007/978-3-030-61056-2_4) [![Preprint](https://img.shields.io/badge/arXiv-2008.12195-red)](http://arxiv.org/abs/2008.12195)
+> **[Bi-Invariant Dissimilarity Measures for Sample Distributions in Lie Groups.](https://epubs.siam.org/doi/10.1137/21M1410373)**  
+> SIAM Journal on Mathematics of Data Science, Volume 4, Issue 4, 2022. </br>
+> [![DOI](https://img.shields.io/badge/DOI-10.1007/978--3--030--61056--2__4-yellow)](http://dx.doi.org/10.1137/21M1410373)
 
 ## Applications
 
