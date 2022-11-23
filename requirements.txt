@@ -1,4 +1,0 @@
-git+https://github.com/morphomatics/morphomatics.git#egg=morphomatics
-pyvista
-ipygany
-ipywidgets
