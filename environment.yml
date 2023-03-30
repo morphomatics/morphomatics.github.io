@@ -5,7 +5,7 @@ dependencies:
   - python=3.8
   - pip
   - pip:
-    - git+https://github.com/morphomatics/morphomatics.git#egg=morphomatics
+    - git+https://github.com/morphomatics/morphomatics.git@v3.0#egg=morphomatics
     - pyvista
     - ipygany
     - ipywidgets
