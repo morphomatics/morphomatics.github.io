@@ -1520,7 +1520,7 @@ connection of group and geometric properties. (This worksâ€”far more generallyâ€
 <span class="n">F</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">rnd</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">rnd</span><span class="o">.</span><span class="n">PRNGKey</span><span class="p">(</span><span class="mi">42</span><span class="p">),</span> <span class="n">num</span><span class="o">=</span><span class="mi">8</span><span class="p">):</span>
     <span class="c1"># random tangent vector</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">randvec</span><span class="p">(</span><span class="n">I</span><span class="p">)</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">randvec</span><span class="p">(</span><span class="n">I</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
     <span class="c1"># shoot geodesic along tangent vector</span>
     <span class="n">E</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
     <span class="n">E</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">v</span><span class="p">))</span>
@@ -1550,7 +1550,7 @@ E = []
 F = []
 for key in rnd.split(rnd.PRNGKey(42), num=8):
     # random tangent vector
-    v = G.randvec(I)
+    v = G.randvec(I, key)
     # shoot geodesic along tangent vector
     E.append(G.group.exp(v))
     E.append(G.group.exp(-v))
