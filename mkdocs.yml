@@ -27,4 +27,5 @@ nav:
         - Regression: tutorials/tutorial_regression.ipynb
         - Statistics in Lie groups: tutorials/tutorial_biinvariant_statistics.ipynb
         - Bézierfold: tutorials/tutorial_bezierfold.ipynb
+    - Advanced: advanced.md
     - Imprint: imprint.md
