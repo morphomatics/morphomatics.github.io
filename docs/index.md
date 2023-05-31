@@ -95,6 +95,8 @@ References:
 
 Several applications have been successively developed based on algorithms from Morphomatics:
 
+* __Sundial Shape Analysis__ **[[Hanik et al. 23]](http://arxiv.org/abs/2305.18960)**
+* __Hurrican Track Analysis__ **[[Nava-Yazdani et al. 23]](http://arxiv.org/abs/2303.17299)**
 * __3D-from-2D Shape Estimation__ **[[Paskin et al. 22]](https://arxiv.org/abs/2207.12687)**
 * __Predicting Cognitive Scores__ **[[Hanik et al. 21]](http://arxiv.org/abs/2106.09408)**
 * __Geodesic B-Score__ **[[Ambellan et al. 21]](http://arxiv.org/abs/2104.01107)**

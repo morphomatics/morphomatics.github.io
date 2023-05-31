@@ -9,7 +9,8 @@ table, th, td {
 }
 </style>
 
-|                                                                                             |                                                                                                                                                        |
-|:-------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|
-|       [![](./images/3Dfrom2D.png)](https://github.com/morphomatics/3Dfrom2DLandmarks)       | [__Reconstructing the 3D shapes of basking shark head skeletons from single monocular 2D images__](https://github.com/morphomatics/3Dfrom2DLandmarks) |
-| [![](./images/hurricanes.png)](https://github.com/morphomatics/GeometricHurricaneAnalysis)  | [__Statistical Analysis of Hurricane Tracks using Bézierfold with a Sasakian metric__](https://github.com/morphomatics/GeometricHurricaneAnalysis)    |
+|                                                                                            |                                                                                                                                                        |
+|:------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|
+|      [![](./images/3Dfrom2D.png)](https://github.com/morphomatics/3Dfrom2DLandmarks)       | [__Reconstructing the 3D shapes of basking shark head skeletons from single monocular 2D images__](https://github.com/morphomatics/3Dfrom2DLandmarks)  |
+| [![](./images/hurricanes.png)](https://github.com/morphomatics/GeometricHurricaneAnalysis) | [__Statistical Analysis of Hurricane Tracks using the Bézierfold with a Sasakian metric__](https://github.com/morphomatics/GeometricHurricaneAnalysis) |
+|        [![](./images/sundial.png)](https://github.com/morphomatics/SundialAnalysis)        | [__Intrinsic Shape Analysis of Ancient Sundials__](https://github.com/morphomatics/SundialAnalysis)                                                    |
