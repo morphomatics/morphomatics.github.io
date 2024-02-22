@@ -89,14 +89,19 @@ References:
 > Martin Hanik, Hans-Christian Hege, Christoph von Tycowicz:  
 > **[Bi-Invariant Dissimilarity Measures for Sample Distributions in Lie Groups.](https://epubs.siam.org/doi/10.1137/21M1410373)**  
 > SIAM Journal on Mathematics of Data Science, Volume 4, Issue 4, 2022. </br>
-> [![DOI](https://img.shields.io/badge/DOI-10.1007/978--3--030--61056--2__4-yellow)](http://dx.doi.org/10.1137/21M1410373)
+> [![DOI](https://img.shields.io/badge/DOI-10.1007/978--3--030--61056--2__4-yellow)](http://dx.doi.org/10.1137/21M1410373) [![Preprint](https://img.shields.io/badge/arXiv-2402.12901-red)](https://arxiv.org/abs/2402.12901)
+
 
 ## Applications
 
 Several applications have been successively developed based on algorithms from Morphomatics:
 
+* __Manifold-Valued Graph Neural Networks__ **[[Hanik et al. 24]](https://arxiv.org/abs/2401.14381)**
+* __Predicting Future Shape__ **[[Türkseven et al. 23]](https://arxiv.org/abs/2212.04740)**
+* __Analysis of Ancient Sundials__ **[[Hanik et al. 23]](https://arxiv.org/abs/2305.18960)**
+* __Hurrican Track Analysis__ **[[Nava-Yazdani et al. 23]](https://arxiv.org/abs/2303.17299)**
 * __3D-from-2D Shape Estimation__ **[[Paskin et al. 22]](https://arxiv.org/abs/2207.12687)**
-* __Predicting Cognitive Scores__ **[[Hanik et al. 21]](http://arxiv.org/abs/2106.09408)**
+* __Predicting Cognitive Scores__ **[[Hanik et al. 22]](http://arxiv.org/abs/2106.09408)**
 * __Geodesic B-Score__ **[[Ambellan et al. 21]](http://arxiv.org/abs/2104.01107)**
 * __Thin-Volume Visualization__ **[[Herter et al. 21]](http://dx.doi.org/10.1111/cgf.14296)**
 * __Jerash Silver Scroll Unfolding__ **[[Baum et al. 21]](http://dx.doi.org/10.1016/j.daach.2021.e00186)**
