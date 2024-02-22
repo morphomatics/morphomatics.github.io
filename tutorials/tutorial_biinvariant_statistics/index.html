@@ -343,6 +343,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../../advanced/" class="md-nav__link">
+        Advanced
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../imprint/" class="md-nav__link">
         Imprint
       </a>
@@ -1500,6 +1515,7 @@ connection of group and geometric properties. (This worksâ€”far more generallyâ€
 
 <span class="kn">import</span> <span class="nn">jax</span>
 <span class="kn">import</span> <span class="nn">jax.numpy</span> <span class="k">as</span> <span class="nn">jnp</span>
+<span class="kn">import</span> <span class="nn">jax.random</span> <span class="k">as</span> <span class="nn">rnd</span>
 
 <span class="kn">from</span> <span class="nn">morphomatics.manifold</span> <span class="kn">import</span> <span class="n">SE3</span>
 <span class="kn">from</span> <span class="nn">morphomatics.stats</span> <span class="kn">import</span> <span class="n">BiinvariantStatistics</span>
@@ -1514,9 +1530,9 @@ connection of group and geometric properties. (This worksâ€”far more generallyâ€
 <span class="c1"># sample 2 data sets around I</span>
 <span class="n">E</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">F</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">rnd</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">rnd</span><span class="o">.</span><span class="n">PRNGKey</span><span class="p">(</span><span class="mi">42</span><span class="p">),</span> <span class="n">num</span><span class="o">=</span><span class="mi">8</span><span class="p">):</span>
     <span class="c1"># random tangent vector</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">randvec</span><span class="p">(</span><span class="n">I</span><span class="p">)</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">randvec</span><span class="p">(</span><span class="n">I</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
     <span class="c1"># shoot geodesic along tangent vector</span>
     <span class="n">E</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
     <span class="n">E</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">v</span><span class="p">))</span>
@@ -1529,6 +1545,7 @@ connection of group and geometric properties. (This worksâ€”far more generallyâ€
 
 import jax
 import jax.numpy as jnp
+import jax.random as rnd
 
 from morphomatics.manifold import SE3
 from morphomatics.stats import BiinvariantStatistics
@@ -1543,9 +1560,9 @@ I = G.group.identity
 # sample 2 data sets around I
 E = []
 F = []
-for _ in range(8):
+for key in rnd.split(rnd.PRNGKey(42), num=8):
     # random tangent vector
-    v = G.randvec(I)
+    v = G.randvec(I, key)
     # shoot geodesic along tangent vector
     E.append(G.group.exp(v))
     E.append(G.group.exp(-v))
@@ -1701,7 +1718,7 @@ repectively.</p>
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># random element</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">rnd</span><span class="o">.</span><span class="n">PRNGKey</span><span class="p">(</span><span class="mi">13</span><span class="p">))</span>
 <span class="c1"># left translate all elements of E and F by B</span>
 <span class="n">BE</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">vmap</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">lefttrans</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">))(</span><span class="n">E</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
 <span class="n">BF</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">vmap</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">lefttrans</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">))(</span><span class="n">F</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
@@ -1710,7 +1727,7 @@ repectively.</p>
 <span class="n">FB</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">vmap</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">righttrans</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">))(</span><span class="n">F</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
 </pre></div>
 <div id="cell-3" class="clipboard-copy-txt"># random element
-B = G.rand()
+B = G.rand(rnd.PRNGKey(13))
 # left translate all elements of E and F by B
 BE = jax.vmap(G.group.lefttrans, (0, None))(E, B)
 BF = jax.vmap(G.group.lefttrans, (0, None))(F, B)
