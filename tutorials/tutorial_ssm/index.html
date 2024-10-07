@@ -1222,7 +1222,7 @@ pl.show(jupyter_backend='static')</div>
 <span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">4</span><span class="p">)):</span>
     <span class="c1"># excite mode</span>
-    <span class="n">coords</span> <span class="o">=</span> <span class="n">SSM</span><span class="o">.</span><span class="n">space</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">SSM</span><span class="o">.</span><span class="n">mean_coords</span><span class="p">,</span> <span class="n">t</span> <span class="o">*</span> <span class="n">std</span> <span class="o">*</span> <span class="n">SSM</span><span class="o">.</span><span class="n">modes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">coords</span> <span class="o">=</span> <span class="n">SSM</span><span class="o">.</span><span class="n">space</span><span class="o">.</span><span class="n">connec</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">SSM</span><span class="o">.</span><span class="n">mean_coords</span><span class="p">,</span> <span class="n">t</span> <span class="o">*</span> <span class="n">std</span> <span class="o">*</span> <span class="n">SSM</span><span class="o">.</span><span class="n">modes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="c1"># map shape space coords to vertex coords</span>
     <span class="n">v</span> <span class="o">=</span> <span class="n">SSM</span><span class="o">.</span><span class="n">space</span><span class="o">.</span><span class="n">from_coords</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
     <span class="c1"># add mesh to plot</span>
@@ -1242,7 +1242,7 @@ std = np.sqrt(SSM.variances[0])
 pl = pv.Plotter(notebook=True, shape=(1,4))
 for i, t in enumerate(np.linspace(-1.0,1.0,4)):
     # excite mode
-    coords = SSM.space.exp(SSM.mean_coords, t * std * SSM.modes[0])
+    coords = SSM.space.connec.exp(SSM.mean_coords, t * std * SSM.modes[0])
     # map shape space coords to vertex coords
     v = SSM.space.from_coords(coords)
     # add mesh to plot

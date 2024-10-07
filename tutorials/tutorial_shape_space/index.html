@@ -1266,40 +1266,36 @@ pl.show(jupyter_backend='static')
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="sd">""" Client-side rendering with `ipygany` and `ipywidgets` for interaction. """</span>
 
 <span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span>
+<span class="kn">from</span> <span class="nn">ipygany</span> <span class="kn">import</span> <span class="n">PolyMesh</span><span class="p">,</span> <span class="n">Scene</span>
 
 <span class="c1"># create viewer</span>
-<span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">v</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">S_straight</span><span class="o">.</span><span class="n">f</span><span class="p">),</span> <span class="mi">3</span><span class="p">),</span> <span class="n">S_straight</span><span class="o">.</span><span class="n">f</span><span class="p">])</span>
-<span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
-<span class="n">pl</span><span class="o">.</span><span class="n">view_xy</span><span class="p">()</span>
-<span class="n">viewer</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">jupyter_backend</span><span class="o">=</span><span class="s1">'ipygany'</span><span class="p">,</span> <span class="n">return_viewer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">scn</span> <span class="o">=</span> <span class="n">Scene</span><span class="p">([</span><span class="n">PolyMesh</span><span class="o">.</span><span class="n">from_vtk</span><span class="p">(</span><span class="n">mesh</span><span class="p">)])</span>
 
 <span class="nd">@interact</span>
 <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">.01</span><span class="p">)):</span>
     <span class="c1"># interpolate: walk along connecting geodesic</span>
     <span class="n">v</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">from_coords</span><span class="p">(</span><span class="n">M</span><span class="o">.</span><span class="n">connec</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">c_straight</span><span class="p">,</span> <span class="n">t</span><span class="o">*</span><span class="n">diff</span><span class="p">))</span>
-    <span class="n">viewer</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="n">v</span>
+    <span class="n">scn</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="n">v</span>
 
-<span class="n">viewer</span>
+<span class="n">scn</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-3">""" Client-side rendering with `ipygany` and `ipywidgets` for interaction. """
 
 from ipywidgets import interact
+from ipygany import PolyMesh, Scene
 
 # create viewer
-pl = pv.Plotter(notebook=True)
 mesh = pv.PolyData(np.asarray(v), np.c_[np.full(len(S_straight.f), 3), S_straight.f])
-pl.add_mesh(mesh)
-pl.view_xy()
-viewer = pl.show(jupyter_backend='ipygany', return_viewer=True)
+scn = Scene([PolyMesh.from_vtk(mesh)])
 
 @interact
 def plot(t=(0,1,.01)):
     # interpolate: walk along connecting geodesic
     v = M.from_coords(M.connec.exp(c_straight, t*diff))
-    viewer.children[0].vertices = v
+    scn.children[0].vertices = v
 
-viewer</div>
+scn</div>
 </div>
 </div>
 </div>
