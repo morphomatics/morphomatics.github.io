@@ -2,10 +2,10 @@ name: binder-environment
 channels:
   - conda-forge
 dependencies:
-  - python=3.8
+  - python=3.10
   - pip
   - pip:
-    - git+https://github.com/morphomatics/morphomatics.git@v3.0#egg=morphomatics
+    - git+https://github.com/morphomatics/morphomatics.git@v4.0#egg=morphomatics
     - pyvista
     - ipygany
     - ipywidgets

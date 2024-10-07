@@ -904,17 +904,17 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="kn">import</span> <span class="nn">jax</span>
 <span class="kn">import</span> <span class="nn">jax.numpy</span> <span class="k">as</span> <span class="nn">jnp</span>
 
-<span class="kn">from</span> <span class="nn">morphomatics.geom.BezierSpline</span> <span class="kn">import</span> <span class="n">BezierSpline</span>
-<span class="kn">from</span> <span class="nn">morphomatics.manifold.Bezierfold</span> <span class="kn">import</span> <span class="n">Bezierfold</span>
-<span class="kn">from</span> <span class="nn">morphomatics.manifold.Sphere</span> <span class="kn">import</span> <span class="n">Sphere</span>
+<span class="kn">from</span> <span class="nn">morphomatics.geom</span> <span class="kn">import</span> <span class="n">BezierSpline</span>
+<span class="kn">from</span> <span class="nn">morphomatics.manifold</span> <span class="kn">import</span> <span class="n">Bezierfold</span>
+<span class="kn">from</span> <span class="nn">morphomatics.manifold</span> <span class="kn">import</span> <span class="n">Sphere</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-1">%env JAX_PLATFORM_NAME=cpu
 import jax
 import jax.numpy as jnp
 
-from morphomatics.geom.BezierSpline import BezierSpline
-from morphomatics.manifold.Bezierfold import Bezierfold
-from morphomatics.manifold.Sphere import Sphere</div>
+from morphomatics.geom import BezierSpline
+from morphomatics.manifold import Bezierfold
+from morphomatics.manifold import Sphere</div>
 </div>
 </div>
 </div>
@@ -964,14 +964,10 @@ from morphomatics.manifold.Sphere import Sphere</div>
 </clipboard-copy>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">Sphere</span><span class="p">()</span>
-
 <span class="n">B</span> <span class="o">=</span> <span class="n">Bezierfold</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">B</span><span class="o">.</span><span class="n">initFunctionalBasedStructure</span><span class="p">()</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-2">M = Sphere()
-
-B = Bezierfold(M, 2, 2)
-B.initFunctionalBasedStructure()</div>
+B = Bezierfold(M, 2, 2)</div>
 </div>
 </div>
 </div>
