@@ -75,16 +75,21 @@ References:
 > [![DOI](https://img.shields.io/badge/DOI-10.1109/ISBI52829.2022.9761465-yellow)](http://dx.doi.org/10.1109/ISBI52829.2022.9761465) [![Preprint](https://img.shields.io/badge/arXiv-2202.01180-red)](http://arxiv.org/abs/2202.01180)
 
 
-## Dissimilarity measures for sample distributions in Lie groups
+## Symmetry-aware Statistics in Lie groups
 
 Multivariate statistical indices are not influenced by common shifts of the data; this is highly desirable as the latter are 
 fundamental symmetries of Euclidean space that do not change relationships between the samples. Lie groups also possess
 symmetries, but Riemannian statistical tools respect them only in special cases. (For example, they do not respect them 
-for data in the group of rigid-body transformations SE(3) in 3-space.) Morphomatics offers methods (a mean and dissimilarity measures for 
-sets of samples) that extend symmetry-awareness to _all_ Lie groups. They can be used, e.g., for two sample tests of SE(3)-valued 
+for data in the group of rigid-body transformations SE(3) in 3-space.) Morphomatics offers methods (a mean, dissimilarity measures for 
+sets of samples, and geodesic regression) that extend symmetry-awareness to _all_ Lie groups. They can be used, e.g., for two sample tests of SE(3)-valued 
 data that do not depend on the initial place and orientation in 3-space of the underlying objects.
 
 References:
+
+> Johannes Schade, Christoph von Tycowicz, Martin Hanik:  
+> **[Bi-invariant Geodesic Regression with Data from the Osteoarthritis Initiative.](https://link.springer.com/chapter/10.1007/978-3-031-96628-6_4)**  
+> SIAM Journal on Mathematics of Data Science, Volume 4, Issue 4, 2022. </br>
+> [![DOI](https://img.shields.io/badge/DOI-10.1007/978--3--031--96628--6__4-yellow)](http://dx.doi.org/10.1007/978-3-031-96628-6_4) [![Preprint](https://img.shields.io/badge/arXiv-2502.11826-red)](https://arxiv.org/abs/2502.11826)
 
 > Martin Hanik, Hans-Christian Hege, Christoph von Tycowicz:  
 > **[Bi-Invariant Dissimilarity Measures for Sample Distributions in Lie Groups.](https://epubs.siam.org/doi/10.1137/21M1410373)**  
@@ -96,7 +101,7 @@ References:
 
 Several applications have been successively developed based on algorithms from Morphomatics:
 
-* __Manifold-Valued Graph Neural Networks__ **[[Hanik et al. 24]](https://arxiv.org/abs/2401.14381)**
+* __Manifold-Valued Graph Neural Networks__ **[[Hanik et al. 26]](https://link.springer.com/article/10.1007/s11263-026-02899-9)**
 * __Predicting Future Shape__ **[[Türkseven et al. 23]](https://arxiv.org/abs/2212.04740)**
 * __Analysis of Ancient Sundials__ **[[Hanik et al. 23]](https://arxiv.org/abs/2305.18960)**
 * __Hurrican Track Analysis__ **[[Nava-Yazdani et al. 23]](https://arxiv.org/abs/2303.17299)**
