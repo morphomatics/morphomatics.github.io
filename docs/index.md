@@ -91,6 +91,7 @@ References:
 > International Conference on Information Processing in Medical Imaging, 2026. </br>
 > [![DOI](https://img.shields.io/badge/DOI-10.1007/978--3--031--96628--6__4-yellow)](http://dx.doi.org/10.1007/978-3-031-96628-6_4) [![Preprint](https://img.shields.io/badge/arXiv-2502.11826-red)](https://arxiv.org/abs/2502.11826)
 
+<!--  -->
 > Martin Hanik, Hans-Christian Hege, Christoph von Tycowicz:  
 > **[Bi-Invariant Dissimilarity Measures for Sample Distributions in Lie Groups.](https://epubs.siam.org/doi/10.1137/21M1410373)**  
 > SIAM Journal on Mathematics of Data Science, Volume 4, Issue 4, 2022. </br>
