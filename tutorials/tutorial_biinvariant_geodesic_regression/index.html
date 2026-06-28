@@ -1469,6 +1469,7 @@ The minimal and average R2-values of the geodesic approximating the translated d
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>We can see that the R2-statistic of the fitted geodesic can change significantly when the data is translated.</p>
 <p>Let's now see whether the regression estimator is equivariant under right translations. Therefore, we visually compare the translated original geodesic $\gamma_R$ with the geodesic $\widetilde{\gamma}_R$ that is the least-squares estimator for the translated data. To this end, we make use of the fact that a sequence of rigid motions can be visualized by applying all to a 3D object: They maniupulate its pose by translating and rotating it so that the object traces out a path. We use a (discretized) paper plane and plot its trajectory under $\gamma_R$ (orange) and $\widetilde{\gamma}_R$ (red). Additionally, we also plot the geodesic that connects the start and end point of $\gamma$ (yellow).</p>
 </div>
 </div>
@@ -1651,7 +1652,7 @@ main_plot(G_riemannian, gamma, gamma_tilde, Y_f)</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>We can see that the results are clearly different. This is bad news. Lie group-valued data is often only well-defined up to translation (and inversion) symmetry, so the results of statistical procedures should not depend on them.</p>
+<p>We can see that the results are clearly different. This is bad news: Lie group-valued data is often only well-defined up to translation (and inversion) symmetry, so the results of statistical procedures should not depend on them. Indeed, with rigid-body motions, we usually want that the results do not depend on the choice of the global reference frame, i.e., the standpoint of an observer that measures the movement of the object. But in the above setting, a change of reference is realized by a right-translation of the data—namely by inverting the relocation of the observer before applying the motion.</p>
 <p>Bi-invariant statistics offers methods that do not suffer from this drawback. It endows Lie groups with an affine structure that yields translated one-parameter subgroups as geodesics. Let us initialize SE(3) with this structure and repeat the above experiment with the new tools.</p>
 </div>
 </div>
@@ -1720,7 +1721,7 @@ main_plot(G_affine, gamma, gamma_tilde, Y_f)</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Apart from small differences that are due to numerical rounding, the results are identical. This is very good news. It shows that bi-invariant statistics are indeed equivariant under translations such that the latter do not influence the quality of the results.</p>
+<p>Apart from small differences that are due to numerical rounding, the results are identical. This is very good news. It shows that bi-invariant statistics are indeed equivariant under translations such that the latter do not influence the quality of the results. Changes of reference thus do not influence our results.</p>
 </div>
 </div>
 </div>
